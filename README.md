@@ -5,6 +5,21 @@ Network Packet Sniffer Based on eBPF
 
 [bpf-developer-tutorial/src/4-opensnoop at main · eunomia-bpf/bpf-developer-tutorial (github.com)](https://github.com/eunomia-bpf/bpf-developer-tutorial/tree/main/src/4-opensnoop)
 
+### Linux数据结构
+
+#### ethhdr
+
+```c
+#include <linux/if_ether.h>
+struct ethhdr {
+	unsigned char	h_dest[ETH_ALEN];	/* destination eth addr	*/
+	unsigned char	h_source[ETH_ALEN];	/* source ether addr	*/
+	__be16		h_proto;		/* packet type ID field	*/
+} __attribute__((packed));
+```
+
+
+
 ### eBPF
 
 #### eBPF程序组成
