@@ -5,6 +5,10 @@ Network Packet Sniffer Based on eBPF
 
 [bpf-developer-tutorial/src/4-opensnoop at main · eunomia-bpf/bpf-developer-tutorial (github.com)](https://github.com/eunomia-bpf/bpf-developer-tutorial/tree/main/src/4-opensnoop)
 
+### 协议与对应数据
+
+参考[TCP/IP常见协议及协议号端口号 - 碗安 - 博客园 (cnblogs.com)](https://www.cnblogs.com/cqwangye/p/12714676.html)
+
 ### Linux数据结构
 
 #### ethhdr
