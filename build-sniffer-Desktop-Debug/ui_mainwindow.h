@@ -11,13 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QHeaderView>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -29,8 +28,9 @@ public:
     QPushButton *start;
     QPushButton *end;
     QPushButton *clear;
-    QTableView *snifferCnt;
-    QListView *packetCnt;
+    QListWidget *linkShow;
+    QListWidget *pkgShow;
+    QLabel *label_load;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -50,12 +50,16 @@ public:
         clear = new QPushButton(centralwidget);
         clear->setObjectName(QString::fromUtf8("clear"));
         clear->setGeometry(QRect(30, 134, 89, 41));
-        snifferCnt = new QTableView(centralwidget);
-        snifferCnt->setObjectName(QString::fromUtf8("snifferCnt"));
-        snifferCnt->setGeometry(QRect(30, 240, 741, 291));
-        packetCnt = new QListView(centralwidget);
-        packetCnt->setObjectName(QString::fromUtf8("packetCnt"));
-        packetCnt->setGeometry(QRect(150, 20, 621, 151));
+        linkShow = new QListWidget(centralwidget);
+        linkShow->setObjectName(QString::fromUtf8("linkShow"));
+        linkShow->setGeometry(QRect(40, 210, 421, 221));
+        pkgShow = new QListWidget(centralwidget);
+        pkgShow->setObjectName(QString::fromUtf8("pkgShow"));
+        pkgShow->setGeometry(QRect(180, 20, 256, 151));
+        label_load = new QLabel(centralwidget);
+        label_load->setObjectName(QString::fromUtf8("label_load"));
+        label_load->setEnabled(false);
+        label_load->setGeometry(QRect(220, 300, 141, 41));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -76,6 +80,7 @@ public:
         start->setText(QApplication::translate("MainWindow", "Start", nullptr));
         end->setText(QApplication::translate("MainWindow", "End", nullptr));
         clear->setText(QApplication::translate("MainWindow", "Clear", nullptr));
+        label_load->setText(QApplication::translate("MainWindow", "loading...", nullptr));
     } // retranslateUi
 
 };
