@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = sniffer1.0.0
-DISTDIR = /home/anne/Documents/prj-sniffer/build-sniffer-Desktop-Debug/.tmp/sniffer1.0.0
+DISTDIR = /home/anne/Documents/prj-sniffer/build-sniffer-Desktop_Qt_5_12_8_GCC_64bit-Debug/.tmp/sniffer1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/anne/Qt5.12.8/5.12.8/gcc_64/lib
 LIBS          = $(SUBLIBS) -L/usr/local/lib -lpcap /home/anne/Qt5.12.8/5.12.8/gcc_64/lib/libQt5Widgets.so /home/anne/Qt5.12.8/5.12.8/gcc_64/lib/libQt5Gui.so /home/anne/Qt5.12.8/5.12.8/gcc_64/lib/libQt5Core.so -lGL -lpthread   
@@ -214,7 +214,6 @@ DIST          = ../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/qt_config.prf \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/spec_post.prf \
-		../sniffer/.qmake.stash \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/toolchain.prf \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/default_pre.prf \
@@ -402,7 +401,6 @@ Makefile: ../sniffer/sniffer.pro ../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/linux-g
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/qt_config.prf \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/toolchain.prf \
 		../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/default_pre.prf \
@@ -577,7 +575,6 @@ Makefile: ../sniffer/sniffer.pro ../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/linux-g
 ../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/qt_config.prf:
 ../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 ../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/toolchain.prf:
 ../../../Qt5.12.8/5.12.8/gcc_64/mkspecs/features/default_pre.prf:
@@ -784,7 +781,7 @@ moc_mainwindow.cpp: ../sniffer/mainwindow.h \
 		../../../Qt5.12.8/5.12.8/gcc_64/include/QtCore/qdatetime.h \
 		moc_predefs.h \
 		../../../Qt5.12.8/5.12.8/gcc_64/bin/moc
-	/home/anne/Qt5.12.8/5.12.8/gcc_64/bin/moc $(DEFINES) --include /home/anne/Documents/prj-sniffer/build-sniffer-Desktop-Debug/moc_predefs.h -I/home/anne/Qt5.12.8/5.12.8/gcc_64/mkspecs/linux-g++ -I/home/anne/Documents/prj-sniffer/sniffer -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtWidgets -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtGui -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../sniffer/mainwindow.h -o moc_mainwindow.cpp
+	/home/anne/Qt5.12.8/5.12.8/gcc_64/bin/moc $(DEFINES) --include /home/anne/Documents/prj-sniffer/build-sniffer-Desktop_Qt_5_12_8_GCC_64bit-Debug/moc_predefs.h -I/home/anne/Qt5.12.8/5.12.8/gcc_64/mkspecs/linux-g++ -I/home/anne/Documents/prj-sniffer/sniffer -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtWidgets -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtGui -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../sniffer/mainwindow.h -o moc_mainwindow.cpp
 
 moc_sniff.cpp: ../sniffer/sniff.h \
 		../../../Qt5.12.8/5.12.8/gcc_64/include/QtCore/QThread \
@@ -917,7 +914,7 @@ moc_sniff.cpp: ../sniffer/sniff.h \
 		../../../Qt5.12.8/5.12.8/gcc_64/include/QtCore/qdatetime.h \
 		moc_predefs.h \
 		../../../Qt5.12.8/5.12.8/gcc_64/bin/moc
-	/home/anne/Qt5.12.8/5.12.8/gcc_64/bin/moc $(DEFINES) --include /home/anne/Documents/prj-sniffer/build-sniffer-Desktop-Debug/moc_predefs.h -I/home/anne/Qt5.12.8/5.12.8/gcc_64/mkspecs/linux-g++ -I/home/anne/Documents/prj-sniffer/sniffer -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtWidgets -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtGui -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../sniffer/sniff.h -o moc_sniff.cpp
+	/home/anne/Qt5.12.8/5.12.8/gcc_64/bin/moc $(DEFINES) --include /home/anne/Documents/prj-sniffer/build-sniffer-Desktop_Qt_5_12_8_GCC_64bit-Debug/moc_predefs.h -I/home/anne/Qt5.12.8/5.12.8/gcc_64/mkspecs/linux-g++ -I/home/anne/Documents/prj-sniffer/sniffer -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtWidgets -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtGui -I/home/anne/Qt5.12.8/5.12.8/gcc_64/include/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../sniffer/sniff.h -o moc_sniff.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1214,25 +1211,6 @@ mainwindow.o: ../sniffer/mainwindow.cpp ../sniffer/mainwindow.h \
 		../../../Qt5.12.8/5.12.8/gcc_64/include/QtCore/QDateTime \
 		../../../Qt5.12.8/5.12.8/gcc_64/include/QtCore/qdatetime.h \
 		ui_mainwindow.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtCore/QVariant \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/QApplication \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtCore/qeventloop.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/qdesktopwidget.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtGui/qguiapplication.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtGui/qinputmethod.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/QMenuBar \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/qmenubar.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/qmenu.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/qaction.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/QPushButton \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/QStatusBar \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/qstatusbar.h \
-		../../../Qt5.12.8/5.12.8/gcc_64/include/QtWidgets/QWidget \
 		../../../Qt5.12.8/5.12.8/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../sniffer/mainwindow.cpp
 

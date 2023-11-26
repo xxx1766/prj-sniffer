@@ -9,17 +9,28 @@
 
 using namespace std;
 extern "C" {
+    #include<stdio.h>
+    #include<stdlib.h>
+    #include<string.h>
+    #include<pcap.h>
+    #include<unistd.h>
+    #include<string.h>
+    #include<ctype.h>
+    #include<netdb.h>
+    #include<sys/file.h>
+    #include<sys/time.h>
+    #include<time.h>
     #include <sys/socket.h>
-    #include <linux/if_ether.h>
     #include <sys/ioctl.h>
+    #include<sys/signal.h>
     #include <net/if.h>
     #include <arpa/inet.h>
-    #include <linux/ip.h>
-    #include <linux/tcp.h>
-    #include <linux/udp.h>
-    #include <linux/ethtool.h>
-    #include <linux/if_ether.h>
-    #include <linux/if_arp.h>
+    #include <netinet/in.h>
+    #include <netinet/ip.h>
+    #include <netinet/tcp.h>
+    #include <netinet/udp.h>
+    #include <netinet/if_ether.h>
+    //#include <linux/if_arp.h>
     #include <linux/ipv6.h>
     #include <linux/icmp.h>
 }
@@ -36,8 +47,10 @@ enum protocol {
     //IPV6
     //ARP
     TCP =6,
-    UDP =17
+    UDP =17,
+    IPV6=41
 };
+//protocol ref: https://blog.csdn.net/qwrdxer/article/details/109188336
 
 // ref: https://blog.csdn.net/fangxin205/article/details/54613226
 // ref: https://blog.csdn.net/hanbo622/article/details/36390031
@@ -187,11 +200,16 @@ public:
     void run();
     void startsniff(int _filter);
     void stop();
-    char data_li[MAXDATAGRAM][2048];
+    char data_li[MAXDATAGRAM][4096];
     void setFilter(int _filter);
+    void processPacket(u_char *arg, const struct pcap_pkthdr *pkthdr, const u_char *packet);
     QString getProtocol(int protocol);
 
 private:
+    char errBuf[PCAP_ERRBUF_SIZE], * devStr;
+    pcap_t * device;
+    int count = 0;
+
     int sock;
     struct ifreq ethreq;
     int n;

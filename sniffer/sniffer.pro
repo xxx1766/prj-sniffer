@@ -19,6 +19,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     sniff.cpp
+LIBS += -L/usr/local/lib -lpcap
 
 HEADERS += \
     mainwindow.h \

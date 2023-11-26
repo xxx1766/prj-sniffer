@@ -56,19 +56,19 @@
    <widget class="QListWidget" name="linkShow">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>20</x>
       <y>210</y>
-      <width>421</width>
-      <height>221</height>
+      <width>761</width>
+      <height>341</height>
      </rect>
     </property>
    </widget>
    <widget class="QListWidget" name="pkgShow">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>140</x>
       <y>20</y>
-      <width>256</width>
+      <width>631</width>
       <height>151</height>
      </rect>
     </property>
@@ -79,8 +79,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>300</y>
+      <x>30</x>
+      <y>170</y>
       <width>141</width>
       <height>41</height>
      </rect>

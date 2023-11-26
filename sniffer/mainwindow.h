@@ -15,6 +15,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void showMac(struct ethhdr *mheader);
+    void showIP(struct iphdr *ipheader);
+    void showIcmp(icmphdr *icmpheader);
+    void showTcp(struct tcphdr *tcpheader);
+    void showUdp(struct udphdr *udpheader);
+    int check_filter(QString qf);
 
 private slots:
     void on_start_clicked();
@@ -24,5 +30,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Sniff *mySniff;
 };
 #endif // MAINWINDOW_H

@@ -1,0 +1,5 @@
+break sniff.cpp:17
+break sniff.cpp:21
+break mainwindow.cpp:28
+
+set exec-wrapper The wrapper for running programs is \

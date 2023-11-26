@@ -1,6 +1,17 @@
 # prj-sniffer
 Network Packet Sniffer Based on eBPF
+## Thinking 
+Q: iOS 的 Thor App 可以在安装了系统描述文件之后，抓取 HTTP/HTTPS 的应用层包。同样因为安装了根证书性质的描述文件，故 Thor 能解析 HTTPS 中的内容。但具体到某些传输控制协议的内容，Thor 无能为力。这告诉了我们什么道理？
+Answer:
+应用层数据包的抓取与解析：Thor App 通过安装系统描述文件，可以抓取并解析 HTTP/HTTPS 的应用层数据包。这说明了在网络通信中，应用层的数据可以被第三方工具捕获和解析，这也是网络安全中需要关注的一部分。
 
+HTTPS 的安全性：虽然 HTTPS 是加密的，但是如果有了根证书，HTTPS 的内容还是可以被解析的。这再次强调了 HTTPS 的安全性主要在于其证书的管理和保护，只有当证书安全时，HTTPS 才能确保数据的安全传输。
+
+协议层次的限制：尽管 Thor 可以解析应用层的 HTTP/HTTPS 数据包，但对于更底层的传输控制协议（如 TCP、UDP 等）的内容，它无法进行解析。这说明了每个工具或技术都有其适用范围和限制，而且网络通信的每一层都有其特定的协议和规则，不同层级的协议可能需要不同的工具和技能来进行分析和处理。
+
+隐私和安全问题：从另一个角度看，这也提醒我们，在移动设备上安装各种应用和工具时，需要注意其可能带来的隐私和安全问题。例如，如果一个恶意应用安装了类似的系统描述文件和根证书，那么它可能会窃取用户在其他应用上的敏感信息。
+
+因此，这个情况告诉我们，在网络通信、数据安全和隐私保护等方面，我们需要有全面和深入的理解，才能更好地保护自己的信息安全。
 ## 前期学习
 
 [bpf-developer-tutorial/src/4-opensnoop at main · eunomia-bpf/bpf-developer-tutorial (github.com)](https://github.com/eunomia-bpf/bpf-developer-tutorial/tree/main/src/4-opensnoop)
